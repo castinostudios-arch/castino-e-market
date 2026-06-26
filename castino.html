@@ -5,13 +5,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="castino-e-market.css">
-    <script src="castino.js">javascript</script>
+    <link rel="stylesheet" href="styles/castino-e-market.css">
     <title>Castino E-Market</title>
+
+    <style>
+        .popup.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar">
+    <div class="top-section">
+    <div class="top-nav">
+        <nav class="navbar">
         <!-- Logo Section -->
         <div class="logo">
             <a href="#">
@@ -34,26 +42,44 @@
             <a href="#" class="btn-Register">Register</a>
             <a href="#" class="btn-Sell">Sell</a>
         </div>
-    </nav>
+         </nav>
+    </div>
+     
 
     <!-- Section for main content -->
     <main>
         <section>
             <section class="welcome-section">
-                <h1>Welcome to Castino E-Market</h1>
+                <h1 class="welcome-title">Welcome to Castino E-Market</h1>
                 <p>Your one-stop online marketplace for all your needs. Explore a wide range of products and services from various sellers across the region.</p>
-            </section>
-            <section class="offer">
-                <h2>What We Offer</h2>
-            </section>
+
+
+                <h2 class="offer">What We Offer</h2>
+            
 
             <!-- Section Search Bar -->
             <section class="search-bar">
-                <form>
-                    <input button type="text" placeholder="Search for products...">
-                    <button type="submit">Search</button>
-                </form>
+                
+                    <input type="button" value="All Goods" class="all-goods js-all-goods">
+                    <input type="text" placeholder="Search for products...">
+
+
+                    <div id="popup" class="popup">
+                        <button class="close-btn" id="closeBtn">&times;</button>
+
+                        <div class="popup-content ">
+                            <h1>Fullscreen Popup</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque deserunt ratione odit itaque optio eveniet aut incidunt ea minima numquam, architecto qui possimus provident atque quo libero! Provident ut, deserunt eveniet ducimus impedit voluptatum harum et inventore, facilis repellat dolorem repudiandae id maxime non omnis modi explicabo excepturi delectus commodi.</p>
+                        </div>
+                    </div>
+                
             </section>
+            </section>
+            </section>
+            
+            
+                
+   </div>
 
             <section class="product-categories">
                 <div class="category">
@@ -70,6 +96,6 @@
                 </div>
         </section>
     </main>
-
+<script src="scripts/castino.js"></script>
 </body>
 </html>
